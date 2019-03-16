@@ -1,0 +1,22 @@
+﻿@model EmployeeCRUD.Models.EmployeeModel
+@{
+    ViewBag.Title = "Delete Employee";
+}
+
+<div class="book-example panel panel-primary">
+    <div class="panel-heading panel-head">Delete Employee</div>
+    <div class="panel-body">
+        <h3>Are you sure you want to delete this?</h3>
+        <h1>@ViewBag.ErrorMessage</h1>
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-9">
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-success" })
+                </div>
+            </div>
+        }
+    </div>
+</div>
